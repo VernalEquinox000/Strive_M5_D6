@@ -17,15 +17,15 @@ const server = express()
 const port = process.env.PORT || 3001
 
 ///MIDDLEWARE
-const loggerMiddleware = (req, res, next) => {
+/* const loggerMiddleware = (req, res, next) => {
     console.log(`${req.method} ${req.url} ${new Date()}`)
     next()} 
 
-const errorMiddleware = (err, req, res, next) => { }
+const errorMiddleware = (err, req, res, next) => { } */
 
 server.use(cors())
 server.use(express.json()) 
-server.use(loggerMiddleware)
+//server.use(loggerMiddleware)
 //NEW server.use(express.static(publicFolderPath))
 
 

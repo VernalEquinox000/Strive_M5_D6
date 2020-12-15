@@ -2,6 +2,8 @@ const express = require("express")
 const fs = require("fs")
 const path = require("path")
 const uniqid = require("uniqid")
+const {getProducts, writeProducts} = require("../../lib/fsUtilities")
+
 //VALIDATION
 const {check, validationResult} = require("express-validator")
 
