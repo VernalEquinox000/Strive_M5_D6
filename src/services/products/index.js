@@ -4,10 +4,13 @@ const path = require("path")
 const uniqid = require("uniqid")
 const {getProducts, writeProducts} = require("../../lib/fsUtilities")
 
-//VALIDATION
-const {check, validationResult} = require("express-validator")
 
 const router = express.Router()
+
+const productsValidation = [
+    check("name").exists().withMessage("Name required"),
+    check("brand").exists().withMessage("brand required")
+]
 
 
 const readFile = fileName => {
